@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome, [[${#httpServletRequest.remoteUser}]]</title>
+    </head>
+    <body>
+        <h2 style="text-align: center">Welcome, [[${#httpServletRequest.remoteUser}]]</h2>
+        <h2 style="text-align: center">What do you want to do?</h2>
+
+        <p style="text-align: center">&nbsp;</p>
+
+        <form action="/device/add" method="get" style="text-align: center">
+            <input type="submit" value="Add new device">
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+        <form th:action="@{/device/update-pass}" method="post" style="text-align: center">
+            <input type="submit" value="Update device's password">
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+        <form th:action="@{/device/delete}" method="post" style="text-align: center">
+            <input type="submit" value="Delete device">
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+        <form th:action="@{/device/get-pass}" method="get" style="text-align: center">
+            <input type="submit" value="Get device's password">
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+        <form action="/device/all" method="get" style="text-align: center">
+            <input type="submit" value="Get all device info">
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+        <form th:action="@{/device/get}" method="get" style="text-align: center">
+            <input type="text" placeholder="Device Name">
+            <input type="submit" value="Get one device info">
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+        <form th:action="@{/logout}" method="post" style="text-align: center">
+            <input type="submit" value="SIGN OUT"/>
+            <p style="text-align: center">&nbsp;</p>
+        </form>
+    </body>
+</html>
