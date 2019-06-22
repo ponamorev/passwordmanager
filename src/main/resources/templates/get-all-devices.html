@@ -33,7 +33,7 @@
                         <td th:text="${device.id}"></td>
                         <td th:text="${device.name}"></td>
                         <td th:text="${device.address}"></td>
-                        <td><a th:href="@{/device/edit/{id}(id=${device.id})}" >Edit</a></td>
+                        <td><a th:href="@{/device/edit/{id}(id=${device.id})}">Edit</a></td>
                         <td><a th:href="@{/device/delete/{id}(id=${device.id})}">Delete</a></td>
                     </tr>
                     </tbody>
@@ -41,5 +41,7 @@
             </div>
             <p class="my-5"><a href="/auth_index" class="btn btn-primary">Return to main page</a></p>
         </div>
+    </div>
+</div>
 </body>
 </html>

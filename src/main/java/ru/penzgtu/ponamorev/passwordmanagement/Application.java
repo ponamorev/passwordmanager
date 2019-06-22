@@ -1,15 +1,8 @@
 package ru.penzgtu.ponamorev.passwordmanagement;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import ru.penzgtu.ponamorev.passwordmanagement.domain.Device;
-import ru.penzgtu.ponamorev.passwordmanagement.repositories.DeviceRepository;
-
-import java.util.Iterator;
-import java.util.List;
 
 @SpringBootApplication
 @Slf4j
